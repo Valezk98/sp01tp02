@@ -19,5 +19,3 @@ fs.writeFile('fs-ejemplo/data/newfile.txt', 'Contenido nuevo', (err)=>{
         console.log('Archivo renombrado');
     });
 });
-
-// 👆 💀 no funciona...
