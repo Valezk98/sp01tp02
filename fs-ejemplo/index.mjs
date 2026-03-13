@@ -9,16 +9,15 @@ fs.readFile('fs-ejemplo/data/example.txt', 'utf-8', (err, data)=> {
 
 // Escribir en un nuevo archivo
 
-fs.writeFile('.data/newfile.txt', 'Contenido nuevo', (err)=>{
+fs.writeFile('fs-ejemplo/data/newfile.txt', 'Contenido nuevo', (err)=>{
     if(err) throw err;
     console.log('Archivo creado y escrito');
-});
 
-// Renombrar un archivo
-
-fs.rename('.data/newfile.txt', '.data/renamedfile.txt', (err)=>{
-    if(err) throw err;
-    console.log('Archivo renombrado');
+    // Renombrar un archivo
+    fs.rename('fs-ejemplo/data/newfile.txt', 'fs-ejemplo/data/renamedfile.txt', (err)=>{
+        if(err) throw err;
+        console.log('Archivo renombrado');
+    });
 });
 
 // 👆 💀 no funciona...
